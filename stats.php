@@ -133,8 +133,9 @@
               $docs_en_ligne[$row["mois"]] = $docs_total;
             }
             
-            $year_s = substr(array_keys($docs_en_ligne)[0], 0, 4);
-            $year_e = substr(array_keys($docs_en_ligne)[sizeof(array_keys($docs_en_ligne)) - 1], 0, 4);
+            $array_keys = array_keys($docs_en_ligne);
+            $year_s = substr($array_keys[0], 0, 4);
+            $year_e = substr($array_keys[sizeof($array_keys) - 1], 0, 4);
 
             // On va remplir les trous intermédiaires
             $total_courant = null;
