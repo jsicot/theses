@@ -1,4 +1,8 @@
-theses
-======
+Présentation
+============
+Scripts PHP permettant d'afficher un portail local de présentation des thèses. Le script se base sur les appels à l'API theses.fr ([documentation](http://documentation.abes.fr/aidethesesfr/accueil/ch03.html))
 
-Outil de diffusion des thèses mis en place à Bordeaux 3.
+Adaptation
+=========
+L'adaptation à un contexte local peut se faire en modifiant les champs du fichier include/config.php
+
