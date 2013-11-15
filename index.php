@@ -183,7 +183,7 @@
 	    {
 	      // On va récupérer le nombre total de consultation
 	      $mois_courant = date("Y-m");
-	      $res = SQL("select sum(nb) as total from ".STATS_TABLE." where mois not like '".$mois_courant."';");
+	      $res = SQL("select sum(nb) as total from ".STATS_TABLE.";");
 	      $row = mysql_fetch_assoc($res);
 	      $stats_total = number_format($row["total"], 0, ',', ' ');
 	      print '<div class="well">';
@@ -242,10 +242,10 @@
                     $nb_pages = ceil($numFound/$par_page);
                     $currentUrlNoPage = preg_replace("/&page=\d*/", "", $currentUrl);
 
-										if (!preg_match("/\?/", $currentUrlNoPage))
-										{
-											$currentUrlNoPage .= "?";
-										}
+		    if (!preg_match("/\?/", $currentUrlNoPage))
+		    {
+			    $currentUrlNoPage .= "?";
+		    }
 
                     print "<li ";
                     if ($current_page == 1) { print "class='disabled'"; }
