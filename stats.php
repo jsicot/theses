@@ -171,6 +171,12 @@
               print "['".$row["mois"]."', ".$row["total"].", ".$docs_en_ligne[$row["mois"]]."],\n";
               $total_fichiers_global += $row["total"];
             }
+            
+            // On va ajouter le mois en cours
+            $sql = "select sum(nb) as total from ".STATS_TABLE." where nb != 0 and mois like '".$mois_courant."';";
+            $res = SQL($sql);
+            $row = mysql_fetch_assoc($res);
+            $total_fichiers_global += $row["total"];
           ?>
           ]);
 
