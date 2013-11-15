@@ -30,7 +30,8 @@
     stats_get_from_tel($identifier, $row["id"]);
     
     // Si on a fait les stats de la thèse, on va mettre à jour son last_checked
-    SQL("update ".RECORDS_TABLE." set stats_total = (select sum(nb) from ".STATS_TABLE." where record_id = ".$id."), last_checked=now() where id = ".$id);
+    $sql_update = "update ".RECORDS_TABLE." set stats_total = (select sum(nb) from ".STATS_TABLE." where record_id = ".$id."), last_checked=now() where id = ".$id;
+    SQL($sql_update);
   }
 ?>
 <html lang="en">
@@ -183,7 +184,7 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid">
-          <a class="brand" href="<?php echo $base_url; ?>"><?php echo $titre_page; ?> [interface en test]</a>
+          <a class="brand" href="<?php echo $base_url; ?>"><?php echo $titre_page; ?></a>
         </div>
       </div>
     </div>

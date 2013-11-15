@@ -208,7 +208,7 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid">
-          <a class="brand" href="<?php echo $base_url; ?>"><?php echo $titre_page; ?> [interface en test]</a>
+          <a class="brand" href="<?php echo $base_url; ?>"><?php echo $titre_page; ?></a>
         </div>
       </div>
     </div>
