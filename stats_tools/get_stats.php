@@ -7,8 +7,8 @@
 
   $ch = curl_init();
   $halsid = stats_init_session();
-  // $res = SQL("select * from ".RECORDS_TABLE." order by last_checked asc limit 0,$nb_these_par_appel");
-  $res = SQL("select * from ".RECORDS_TABLE." where id = 102");
+  $res = SQL("select * from ".RECORDS_TABLE." order by last_checked asc limit 0,$nb_these_par_appel");
+  // $res = SQL("select * from ".RECORDS_TABLE." where id = 102");
   while ($row = mysql_fetch_assoc($res))
   {
     $identifier = $row["identifier"];
