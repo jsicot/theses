@@ -316,11 +316,11 @@
     
     if ($statut_courant == "finidispo")
     {
-      $sortie .= '<li>Soutenue et accesible en ligne</li>';
+      $sortie .= '<li>Soutenue et accessible en ligne</li>';
     }
     else
     {
-      $sortie .= '<li><a href="'.$curUrl.'&statut=finidispo">Soutenue et accesible en ligne</a></li>';  
+      $sortie .= '<li><a href="'.$curUrl.'&statut=finidispo">Soutenue et accessible en ligne</a></li>';  
     }
     return $sortie;
   }
