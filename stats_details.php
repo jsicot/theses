@@ -19,6 +19,7 @@
   $identifier = $row["identifier"];
   $creator = $row["creator"];
   $date_soutenance = $row["date_soutenance"];
+  $date_maj_stats = $row["last_checked"];
   
   $refresh_stats = getParam("refresh_stats");
   if ($refresh_stats == "ok")
@@ -196,7 +197,7 @@
     </div>
     <h1>Évolution des téléchargements</h1>
     <div id="chart_div"></div>
-    <div style='text-align:center; font-size:0.9em'><a href='stats_details.php?id=<?php echo $id; ?>&refresh_stats=ok'>(mettre à jour les statistiques depuis le serveur)</a></div>
+    <div style='text-align:center; font-size:0.9em'><a href='stats_details.php?id=<?php echo $id; ?>&refresh_stats=ok'>[mettre à jour les statistiques depuis le serveur &mdash; dernière màj : <?php echo $date_maj_stats; ?>]</a></div>
     <footer>
       <hr/>
       Retour au <a href='stats.php'>statistiques</a>.
