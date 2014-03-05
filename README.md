@@ -4,5 +4,7 @@ Scripts PHP permettant d'afficher un portail local de présentation des thèses.
 
 Adaptation
 =========
-L'adaptation à un contexte local peut se faire en modifiant les champs du fichier include/config.php
+Pour mettre en place l'outil pour votre université : 
+* modifiez les champs du fichier include/config.php
+* initialiser la base de données à partir du fichier db_structure.sql
 
