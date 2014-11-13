@@ -6,5 +6,4 @@ Adaptation
 =========
 Pour mettre en place l'outil pour votre université : 
 * modifiez les champs du fichier include/config.php
-* initialiser la base de données à partir du fichier db_structure.sql
 
